@@ -13,12 +13,9 @@ body {
 
 /* استایل هدر با تم سرمه‌ای */
 .main-header {
-    background-color: #0f172a; /* سرمه‌ای تیره */
-    background-image: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: white;
-    position: relative;
-    padding-bottom: 60px;
-    border-bottom: 4px solid #3b82f6; /* خط آبی روشن برای زیبایی */
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .header-top {
