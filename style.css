@@ -13,9 +13,12 @@ body {
 
 /* استایل هدر با تم سرمه‌ای */
 .main-header {
-    background-image: url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #0f172a;
+    background-image: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    position: relative;
+    padding-bottom: 60px;
+    border-bottom: 4px solid #3b82f6;
 }
 
 .header-top {
@@ -27,15 +30,13 @@ body {
     margin: 0 auto;
 }
 
-.logo {
-    height: 50px;
-}
-
+/* استایل لوگوی متنی */
 .logo-text {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 900;
-    color: #60a5fa; /* آبی روشن */
-    letter-spacing: 2px;
+    color: #60a5fa;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
 }
 
 .search-bar input {
@@ -47,7 +48,13 @@ body {
     color: white;
     border: 1px solid #334155;
     outline: none;
+    transition: border 0.3s;
 }
+
+.search-bar input:focus {
+    border-color: #3b82f6;
+}
+
 .search-bar input::placeholder {
     color: #94a3b8;
 }
@@ -82,16 +89,19 @@ body {
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn-primary:hover {
     background-color: #2563eb;
+    transform: translateY(-2px);
 }
 
 .hero-img {
     width: 350px;
+    border-radius: 15px;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+    border: 2px solid #334155;
 }
 
 /* استایل دسته بندی ها */
@@ -101,12 +111,13 @@ body {
     gap: 30px;
     padding: 30px 20px;
     background: white;
-    margin: -30px auto 30px; /* آوردن به روی هدر */
+    margin: -30px auto 30px;
     max-width: 1100px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     position: relative;
     z-index: 10;
+    flex-wrap: wrap;
 }
 
 .category-item {
@@ -121,13 +132,14 @@ body {
     transform: translateY(-5px);
 }
 
-.category-item img {
-    width: 55px;
-    height: 55px;
-    background: #e2e8f0;
+.category-item svg {
+    width: 40px;
+    height: 40px;
+    background: #eff6ff;
     border-radius: 50%;
     padding: 10px;
     margin-bottom: 10px;
+    box-sizing: content-box;
 }
 
 .category-item span {
@@ -147,14 +159,15 @@ body {
 
 .banner-img {
     width: 100%;
-    height: auto;
+    height: 250px;
+    object-fit: cover;
     display: block;
 }
 
 /* استایل بخش محصولات */
 .products-section {
     max-width: 1100px;
-    margin: 0 auto 50px;
+    margin: 0 auto 30px;
     background: white;
     padding: 25px;
     border-radius: 15px;
@@ -205,11 +218,10 @@ body {
 .product-card img {
     width: 100%;
     height: 160px;
-    object-fit: contain;
+    object-fit: cover;
     margin-bottom: 15px;
     background: white;
     border-radius: 8px;
-    padding: 10px;
 }
 
 .product-card h3 {
@@ -220,7 +232,34 @@ body {
 }
 
 .product-card .price {
-    color: #2563eb; /* آبی برای قیمت */
+    color: #2563eb;
     font-weight: 900;
     font-size: 1.1rem;
+}
+
+/* واکنش‌گرایی (ریسپانسیو) برای موبایل */
+@media (max-width: 768px) {
+    .header-top, .header-hero {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+    .search-bar input {
+        width: 100%;
+        margin-top: 15px;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+    .hero-img {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .categories {
+        gap: 15px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
