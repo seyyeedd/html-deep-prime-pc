@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>پرایم پی سی | Prime PC - فروشگاه قطعات کامپیوتر</title>
     <link rel="stylesheet" href="style.css">
+    <!-- فونت وزیرمتن -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
     <!-- هدر سایت -->
     <header class="main-header">
+        <!-- لایه تاریک برای خوانایی متن روی عکس -->
+        <div class="header-overlay"></div>
+        
+        <!-- بخش بالای هدر (لوگو و جستجو) -->
         <div class="header-top">
             <div class="logo-container">
                 <!-- لوگوی شما -->
@@ -21,20 +26,17 @@
             </div>
         </div>
         
+        <!-- بخش اصلی هدر (متن و دکمه) -->
         <div class="header-hero">
             <div class="hero-text">
                 <h1>قدرت بی‌نهایت با پرایم پی سی</h1>
                 <p>بهترین قطعات سخت‌افزاری برای رندر، گیمینگ و کارهای سنگین</p>
                 <a href="#products" class="btn-primary">مشاهده محصولات</a>
             </div>
-            <div class="hero-images">
-                <!-- عکس بزرگ کارت گرافیک شما -->
-                <img src="images/gpu-hero.png" alt="کارت گرافیک" class="hero-img">
-            </div>
         </div>
     </header>
 
-    <!-- نوار دسته بندی ها (استفاده از آیکون های SVG چون عکس آیکون ندارید) -->
+    <!-- نوار دسته بندی ها -->
     <section class="categories">
         <div class="category-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
@@ -70,7 +72,7 @@
         </div>
     </section>
 
-    <!-- اولین پست / بنر (عکس شما) -->
+    <!-- بنر تبلیغاتی اول (اختیاری) -->
     <section class="first-post-banner">
         <img src="images/first-post.jpg" alt="پیشنهاد ویژه پرایم پی سی" class="banner-img">
     </section>
@@ -83,25 +85,21 @@
         </div>
         
         <div class="product-grid">
-            <!-- محصول ۱ -->
             <div class="product-card">
                 <img src="images/product1.jpg" alt="کارت گرافیک">
                 <h3>کارت گرافیک RTX 4070</h3>
                 <p class="price">۴۵,۰۰۰,۰۰۰ تومان</p>
             </div>
-            <!-- محصول ۲ -->
             <div class="product-card">
                 <img src="images/product2.jpg" alt="پردازنده">
                 <h3>پردازنده Core i7</h3>
                 <p class="price">۱۸,۵۰۰,۰۰۰ تومان</p>
             </div>
-            <!-- محصول ۳ -->
             <div class="product-card">
                 <img src="images/product3.jpg" alt="رم">
                 <h3>رم DDR5 32GB</h3>
                 <p class="price">۶,۲۰۰,۰۰۰ تومان</p>
             </div>
-            <!-- محصول ۴ -->
             <div class="product-card">
                 <img src="images/product4.jpg" alt="مادربرد">
                 <h3>مادربرد Z790</h3>
@@ -109,7 +107,8 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- بخش محصولات ۲ -->
     <section class="products-section">
         <div class="section-header">
             <h2>محصولات پرفروش</h2>
@@ -139,7 +138,11 @@
             </div>
         </div>
     </section>
-    -->
+
+    <!-- فوتر (اختیاری - برای زیبایی بیشتر) -->
+    <footer class="main-footer">
+        <p>تمامی حقوق برای پرایم پی سی محفوظ است. © ۲۰۲۴</p>
+    </footer>
 
 </body>
 </html>
