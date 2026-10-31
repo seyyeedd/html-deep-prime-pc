@@ -13,19 +13,36 @@ body {
 
 /* استایل هدر با تم سرمه‌ای */
 .main-header {
-    background-image: url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    position: relative;
+    /* عکس خود را اینجا جایگزین کنید. اگر اسم عکس شما فرق دارد، آن را تغییر دهید */
+    background-image: url('images/hero-bg.jpg'); 
+    background-size: cover; /* پوشش کل فضا */
+    background-position: center; /* قرارگیری در مرکز */
+    background-repeat: no-repeat;
+    color: white;
+    padding-bottom: 80px;
+    border-bottom: 4px solid #3b82f6;
+    min-height: 450px; /* حداقل ارتفاع برای اینکه هدر بزرگ به نظر برسد */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.header-top {
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+/* لایه تاریک روی عکس (برای اینکه متن‌های سفید دیده شوند) */
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+    z-index: 1;
 }
+
+/* قرار دادن محتوا بالای لایه تاریک */
+.header-top, .header-hero {
+    position: relative;
+    z-index: 2;
 
 .logo {
     height: 50px;
